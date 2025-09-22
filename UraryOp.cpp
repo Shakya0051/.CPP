@@ -15,7 +15,7 @@ class A
     {
         feet++;
         inch++;
-        cout<<"\nfeet & inches(Decrement):"<<feet<<""<<inch;
+        cout<<"\nfeet & inches(Increment):"<<feet<<""<<inch;
     }
 };
 
