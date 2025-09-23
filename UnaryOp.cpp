@@ -4,7 +4,7 @@ using namespace std;
 class A
 {
   public :
-    int feet,inch;
+    int feet,inch;   //Operator overloading
 
     A(int f,int i)
     {
