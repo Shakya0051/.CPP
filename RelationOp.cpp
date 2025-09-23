@@ -16,7 +16,7 @@ class A
         }
         int operator>(A temp)  
         {
-            if (this->a  < temp.a && this->b < temp.b)   //relational operator in operator overloading
+            if (this->a  <= temp.a && this->b <= temp.b)   //relational operator in operator overloading
             {
                 return 1;
             }
@@ -34,8 +34,8 @@ class A
 
 int main()
 {
-    A ob1(95,66);
-    A ob2(64,45);
+    A ob1(15,66);
+    A ob2(64,66);
 
     if (ob1>ob2)
     {
