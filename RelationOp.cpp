@@ -14,7 +14,7 @@ class A
         {
 
         }
-        int operator>(A temp)  
+        int operator>(A temp)    //keyword for operator overloading
         {
             if (this->a  <= temp.a && this->b <= temp.b)   //relational operator in operator overloading
             {
