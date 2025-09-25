@@ -2,38 +2,28 @@
 #include<iomanip>
 using namespace std;
 
-class time
+class Time
 {
    int hours,minutes,seconds;
    public:
-    time()
+    Time()
     {
         hours = 0;
         minutes = 0;
         seconds = 0;
     }
-    time(int h,int m,int s)
+    Time(int h,int m,int s)
     {
         hours = h;
         minutes = m;
         seconds = s;
 
     }
-    if (seconds >= 60)
-      {
-            minutes += seconds / 60;
-            seconds = seconds % 60;
-        }
-        if (minutes >= 60)
-         {
-            hours += minutes / 60;
-            minutes = minutes % 60;
-        }
-
     
-    time add(time t)
+    
+    Time add(Time t)
     {
-        time temp;
+        Time temp;
         temp.hours = hours + t.hours;
         temp.minutes = minutes + t.minutes;
         temp.seconds = seconds + t.seconds;
@@ -59,5 +49,10 @@ class time
 
 int main()
 {
-  
+  Time t1(2,45,23);
+  Time t2(4,56,43);
+  Time t3;
+
+  t3 = t1.add(t2);
+  t3.display();
 }
