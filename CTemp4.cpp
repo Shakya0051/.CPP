@@ -9,7 +9,7 @@ T fun(T a ,U b )
 
 int main()
 {
-    cout<<fun(12.5,5)<<endl; //first element parameter determine the other variables parameters
-    cout<<fun(12,5.5)<<endl;  //in first return type is float 
+    cout<<fun(12.5,5)<<endl; //first element parameter determine the other variables parameters 
+    cout<<fun(12,5.5)<<endl;  //in first return type is float //different data types
                               //in second return type is int
 }
