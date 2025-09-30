@@ -10,11 +10,10 @@ int main()
     cin>>n;*/
 
     array<int,5> a ;
-    cout<<"Enter value of array : ";
+    cout<<" Enter value of array : ";
     for( int i=0; i<5; i++)
     {
-          cout<< a[i] <<" ";
-          cin>>a;
+          cin>>a[i];
     }
     cout<<"Value of array : "<<endl;
     for(auto i : a)
@@ -31,7 +30,7 @@ int main()
         cout<<i<<" ";
     }*/
    int se ; //for searching
-   cout<<"Enter value to be search : ";
+   cout<<" \nEnter value to be search : ";
    cin>>se;
 
    auto ptr = find(a.begin(), a.end(),se);
