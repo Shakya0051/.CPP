@@ -38,22 +38,22 @@ int main()
     }
     cout<<endl;
 
-    v.erase(v.begin()+1);
+    v.erase(v.begin()+1);      //for erase 
     for(auto i : v)
     {
         cout<<i<<" ";
     }
     cout<<endl;
-    cout<<v.size()<<endl;
-    cout<<v.empty()<<endl;
-    reverse(v.begin(), v.end());
+    cout<<v.size()<<endl;        //for size
+    cout<<v.empty()<<endl;      //for empty
+    reverse(v.begin(), v.end());   //for reverse
     for(auto i : v)
     {
         cout<<i<<" ";
     }
     cout<<endl;
     
-    sort(v.begin(), v.end());
+    sort(v.begin(), v.end());   //for sort
     for(auto i : v)
     {
         cout<<i<<" ";
@@ -62,10 +62,10 @@ int main()
 
     
     int value = 67;
-    int c = count(v.begin(), v.end(),value);
+    int c = count(v.begin(), v.end(),value);   //for count
     cout<<c<<endl;
 
-    v.clear();
+    v.clear();      //for clear
     for(auto i : v)
     {
         cout<<i<<" ";

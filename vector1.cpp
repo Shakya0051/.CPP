@@ -13,7 +13,7 @@ int main()
     else
         cout<<"Vector are not equal"<<endl;
 
-    v1.swap(v);
+    v1.swap(v);                                  //for swap
     for(auto i : v)
     {
         cout<<i<<" ";
