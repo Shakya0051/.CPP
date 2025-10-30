@@ -170,6 +170,59 @@ void search(int value)
     }
 }
 
+//count node
+
+void count()
+{
+    Node*temp = head;
+    int c= 0;
+    while(temp!= NULL)
+    {
+        c++;
+        temp= temp-> next;
+    }
+    cout<<"Total Number Of Node is : "<<c<<endl;
+}
+
+//update list
+
+bool updatelist(int index, int newdata)
+{
+    Node* temp= head;
+    int c=0;
+    while(temp!=NULL)
+    { 
+        if(c==index)
+        { 
+            temp->data= newdata;
+            return true;
+        }
+        c++;
+        temp= temp->next;
+    }
+      return false;   // No Record Found
+}
+
+//Reverse List
+
+void reverse()
+{
+    Node* p = NULL;
+    Node* c = head;
+    Node* n = NULL;
+
+    while(c!=NULL)
+    {
+        n= c->next;
+        c->next = p;
+        p = c;
+        c = n;
+    }
+    head = p;
+    cout<<"Find Reverse List : "<<endl;
+
+}
+
 // Function to display the linked list
 void display() {
     Node* temp = head;
@@ -188,9 +241,9 @@ void display() {
 
 // Main function
 int main() {
-    int choice, value, position;
+    int choice, value, position,index;
 
-    while (true) {
+    while (choice!=100) {
         cout << "\n--- Linked List Menu ---\n";
         cout << "1. Insert at Beginning\n";
         cout << "2. Insert at End\n";
@@ -198,9 +251,12 @@ int main() {
         cout << "4. Delete at first\n";
         cout << "5. Delete at Last\n";
         cout << "6. Delete at position\n";
-        cout << "7. Search\n";
-        cout << "8. Display\n";
-        cout << "9. Exit\n";
+        cout << "7. Search Node\n";
+        cout << "8. Count Nodes\n";
+        cout << "9. Update Data\n";
+        cout << "10. Reverse List\n";
+        cout << "11. Display\n";
+        cout << "12. Exit\n";
         cout << "Enter your choice: ";
         cin >> choice;
 
@@ -241,14 +297,30 @@ int main() {
                cout<<"Enter Value : ";
                cin >> value;
                search(value);
-               break;    
-
-
+               break;
+               
             case 8:
+               count();
+               break; 
+               
+            case 9:
+                cout<<"Enter Index Number : ";
+                cin >> index;
+                cout<<"Enter value : ";
+                cin >> value;
+                updatelist(index,value);
+                break; 
+                
+            case 10:
+                reverse();
+                break;    
+
+
+            case 11:
                 display();
                 break;
 
-            case 9:
+            case 12:
                 cout << "Exiting...\n";
                 return 0;
                
