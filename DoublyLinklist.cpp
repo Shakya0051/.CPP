@@ -282,7 +282,7 @@ class DoublyLinklist
 int main()
 {
     DoublyLinklist obj;
-    int choice , value, pos;
+    int choice , value,index, pos;
 
     do
     {
