@@ -143,6 +143,133 @@ void deleteAtfirst()
     }
 }
 
+//Delete at last
+
+void deleteAtlast()
+{
+    if(head == NULL)
+    {
+        cout<<"List is Empty "<<endl;
+    }
+    else if(head->next == head)
+    {
+        delete head;
+        head = NULL;
+        cout<<"Only one node in list "<<endl;
+    }
+    else
+    {
+        Node* temp = head;
+        Node* p = NULL;
+        while (temp->next!=head)
+        {
+           p = temp;
+           temp = temp->next;
+        }
+        p->next = head;
+        delete temp;
+        cout<<"Last Node is deleted "<<endl;   
+    }
+}
+
+//Delete at position
+
+void deleteAtposition(int pos)
+{
+    if(head = NULL)
+    {
+       cout<<"List is Empty "<<endl;
+    }
+    else if(pos == 1)
+    {
+        deleteAtfirst();
+        
+    }
+    else
+    {
+       Node* temp = head;
+       Node* p = NULL;
+       for(int i=1; i<pos; i++)
+       {
+          if(temp->next==head)
+          {
+            cout<<"Out of range "<<endl;
+            return;
+          }
+         p = temp;
+         temp= temp->next;
+       }
+      p->next = temp->next;
+      delete temp;
+      cout<<"Node is deleted at given position "<<endl;
+    }
+
+}
+
+//count
+
+void count()
+{
+    Node* temp = head;
+    int c = 0;
+    while(temp->next!=head)
+    {
+        c++;
+        temp = temp->next;
+    }
+    cout<<"Total no of Nodes is : "<<c+1<<endl;
+}
+
+//search
+
+void search(int value)
+{
+   if(head == NULL)
+   {
+    cout<<"List is Empty "<<endl;
+   }
+   else
+   {
+      Node* temp = head;
+      int c= 1;
+      while(temp->next!=head)
+      {
+         if(temp->data == value)
+         {
+            cout<<"Record is found "<<endl;
+            c = 2;
+            return;
+         }
+         temp = temp->next;
+      }
+      if(temp->data == value)
+      {
+        cout<<"REcord is Found "<<endl;
+      }
+      else if(c==1)
+      {
+        cout<<"Record is not found "<<endl;
+      }
+   }
+}
+/*//update list
+
+void update(int pos,int value)
+{
+    if(head == NULL)
+    {
+        cout<<"List is empty ";
+        return;
+    }
+    if(pos>counta)
+    {
+        cout<<"out of range ";
+        return;
+    }
+    Node* temp = head;
+    for(int)
+}*/
+
 
 //Display
 
@@ -179,7 +306,11 @@ int main()
         cout<<"2. Insert at last "<<endl;
         cout<<"3. Insert at position "<<endl;
         cout<<"4. Delete at first "<<endl;
-        cout<<"5. Display "<<endl;
+        cout<<"5. Delete at last "<<endl;
+        cout<<"6. Delete at position "<<endl;
+        cout<<"7. Count Nodes "<<endl;
+        cout<<"8. Search "<<endl;
+        cout<<"9. Display "<<endl;
         cout<<"Enter Your Choice : ";
         cin >> choice;
      
@@ -207,9 +338,29 @@ int main()
               
             case 4:
               obj.deleteAtfirst();
-              break; 
-
+              break;
+              
             case 5:
+              obj.deleteAtlast();
+              break;
+              
+            case 6:
+              cout<<"Enter Position : ";
+              cin >> pos;
+              obj.deleteAtposition(pos);
+              break;
+              
+            case 7:
+            obj.count();
+            break;
+
+            case 8:
+            cout<<"Enter Value :";
+            cin >> value;
+            obj.search(value);
+            break;
+
+            case 9:
               obj.display();
               break;  
         }
