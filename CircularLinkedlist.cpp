@@ -244,7 +244,7 @@ void search(int value)
       }
       if(temp->data == value)
       {
-        cout<<"REcord is Found "<<endl;
+        cout<<"Record is Found "<<endl;
       }
       else if(c==1)
       {
