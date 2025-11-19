@@ -53,14 +53,14 @@ class PriorityQueue
     //Delete the element
 
     void delete1()
-    {    Node* data;
+    {   
         if(start== NULL)
         {
             cout<<"UNDERFLOW"<<endl;
         }
         else
         {
-            cout<<"Deleted item is: "<start->data<<endl;
+            cout<<"Deleted item is: "<<start->data<<endl;
             Node* temp = start;
             start = start->next;
             delete temp;
