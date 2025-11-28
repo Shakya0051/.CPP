@@ -9,9 +9,9 @@ void quickSort(int arr[], int l, int h)
 
     while(low<=high)
     {
-        if(arr[low]<key)
+        while(arr[low]<key)
         low++;
-        if(arr[high]>key)
+        while(arr[high]>key)
         high--;
         
         if(low<=high)
